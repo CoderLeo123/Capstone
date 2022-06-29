@@ -123,6 +123,16 @@ namespace Capstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inventoryMonitor {
+            get {
+                object obj = ResourceManager.GetObject("inventoryMonitor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Items {
             get {
                 object obj = ResourceManager.GetObject("Items", resourceCulture);
@@ -206,6 +216,16 @@ namespace Capstone.Properties {
         internal static System.Drawing.Bitmap Products {
             get {
                 object obj = ResourceManager.GetObject("Products", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sales {
+            get {
+                object obj = ResourceManager.GetObject("Sales", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
