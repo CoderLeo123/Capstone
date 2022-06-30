@@ -3,8 +3,8 @@ namespace Capstone
     public partial class Form1 : Form
     {
        
-        Boolean isCollapsed1, isCollapsed3 = true;
-        Boolean isCollapsed2 = true;
+        Boolean isCollapsed1, isCollapsed2, isCollapsed3 = true;
+        
         public Form1()
         {
             InitializeComponent();
@@ -22,12 +22,7 @@ namespace Capstone
 
         private void dropBtnProducts_Click(object sender, EventArgs e)
         {
-            isCollapsed1 = true;
-            isCollapsed3 = false;
-            isCollapsed2 = false;
-            timerDrpBtnSales.Start();
-            timerDrpBtnPayment.Start();
-            timerDrpBtnProducts.Start();
+            
         }
 
         private void timerDrpBtnPayment_Tick(object sender, EventArgs e)
@@ -56,12 +51,7 @@ namespace Capstone
 
         private void dropBtnPayment_Click(object sender, EventArgs e)
         {
-            isCollapsed2 = true;
-            isCollapsed3 = false;
-            isCollapsed1 = false;
-            timerDrpBtnPayment.Start();
-            timerDrpBtnSales.Start();
-            timerDrpBtnProducts.Start();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -95,16 +85,7 @@ namespace Capstone
             }
         }
 
-        private void dropBtnSales_Click(object sender, EventArgs e)
-        {
-            isCollapsed3 = true;
-            isCollapsed1 = false;
-            isCollapsed2 = false;
-            timerDrpBtnSales.Start();
-            timerDrpBtnPayment.Start();
-            timerDrpBtnProducts.Start();
-
-        }
+        
 
         private void button9_Click(object sender, EventArgs e)
         {
@@ -115,6 +96,130 @@ namespace Capstone
         {
 
         }
+
+        private void button32_Click(object sender, EventArgs e)
+        {//btnSalesReport
+            btnCollapsed();
+            timerStart();
+        }
+        public void btnCollapsed()
+        {
+            isCollapsed2 = false;
+            isCollapsed3 = false;
+            isCollapsed1 = false;
+            
+        }
+        public void timerStart()
+        {
+            timerDrpBtnPayment.Start();
+            timerDrpBtnSales.Start();
+            timerDrpBtnProducts.Start();
+        }
+       
+        private void dropBtnSales_Click_1(object sender, EventArgs e)
+        {//isCollapsed3
+            isCollapsed3 = true;
+            isCollapsed2 = false;
+            isCollapsed1 = false;
+            timerStart();
+        }
+        private void dropBtnPayment_Click_1(object sender, EventArgs e)
+        {//isCollapsed2
+            isCollapsed2 = true;
+            isCollapsed3 = false;
+            isCollapsed1 = false;
+            timerStart();
+        }
+
+        private void dropBtnProducts_Click_1(object sender, EventArgs e)
+        {//isCollapsed1
+            isCollapsed1 = true;
+            isCollapsed2 = false;
+            isCollapsed3 = false;
+            
+            timerStart();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnPatientR_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {//btnPayStatus
+            
+        }
+
+        private void btnOrderStatus_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnTranscHist_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnProd_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnStockDel_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnInventoryReport_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnBackupArch_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnUserSettings_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            btnCollapsed();
+            timerStart();
+        }
+
+        
 
         private void timerDrpBtnProducts_Tick(object sender, EventArgs e)
         {
